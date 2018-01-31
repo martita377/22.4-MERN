@@ -11,7 +11,16 @@ router.route('/posts/:cuid').get(PostController.getPost);
 // Add a new Post
 router.route('/posts').post(PostController.addPost);
 
+// Update a post by cuid
+router.route('/posts/:cuid').put(PostController.editPost);
+
 // Delete a post by cuid
 router.route('/posts/:cuid').delete(PostController.deletePost);
+
+// THUMBUP
+router.route('/posts/thumbup/:cuid').put(PostController.thumbUp);
+
+// THUMBDOWN
+router.route('/posts/thumbdown/:cuid').put(PostController.thumbDown);
 
 export default router;
