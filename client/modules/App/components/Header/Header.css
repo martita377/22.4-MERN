@@ -2,6 +2,7 @@
   background: #eee url('../../header-bk.png') center;
   background-size: cover;
   border-bottom: 1px solid #ccc;
+  
 }
 
 .content {
@@ -16,11 +17,14 @@
   font-weight: 300;
   font-size: 42px;
   float: left;
+  text-decoration: none;
 }
 
 .site-title a {
   text-decoration: none;
-  color: #FFF;
+  color: #888;
+  margin-left: 11px;
+  text-shadow: 2px 2px 3px #03A9F4;
 }
 
 .add-post-button {
@@ -33,23 +37,42 @@
   float: right;
 }
 
-.language-switcher {
+.menu-container {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.language-switcher ul {
-  list-style: none;
-  width: 980px;
+.menu {
+  max-width: 980px;
+  min-width: 320px;
   margin: auto;
+  min-height: 60px;
+  line-height: 60px;
   text-align: right;
 }
 
-.language-switcher li {
+.menu-items, .language-switcher {
   display: inline-block;
-  margin: 10px;
+}
+
+
+.menu ul li {
+  display: inline-block;
   padding: 5px;
-  cursor: pointer;
   color: #fff;
+  cursor: pointer;
+  margin: auto;
+ }
+
+.menu-items li a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 16px;
+  margin-left: 16px;
+  text-transform: uppercase;
+}
+
+.menu-items>li>a:hover {
+  color: #03A9F4;
 }
 
 .language-switcher li:first-child {

@@ -106,3 +106,4 @@ export function thumbDown(req, res) {
     res.json({ post });
   });
 }
+

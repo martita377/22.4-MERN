@@ -36,19 +36,6 @@ export class PostDetailPage extends React.Component {
     this.props.editPostRequest(this.state);
   };
 
-  render() {
-    return (
-      <div>
-        <Helmet title={this.props.post.title} />
-        <a className={styles['edit-post-button']} href="#" onClick={this.props.toggleEditPost}><FormattedMessage id="editPost" /></a>
-        {
-          this.props.showEditPost
-            ? this.renderPostForm()
-            : this.renderPost()
-        }
-      </div>
-    );
-  }
 
   renderPostForm = () => {
     return (
@@ -65,12 +52,26 @@ export class PostDetailPage extends React.Component {
   renderPost = () => {
     return (
       <div className={`${styles['single-post']} ${styles['post-detail']}`}>
-        <h3 className={styles['post-title']}>{this.props.post.title}</h3>
+        <h3 className={styles['post-title']}>{this.props.post.title}< /h3>
         <p className={styles['author-name']}><FormattedMessage id="by" /> {this.props.post.name}</p>
-        <p className={styles['post-desc']}>{this.props.post.content}</p>
+        <p className={styles['post-desc']}>{this.props.post.content}< /p>
       </div>
     );
-  };
+  }
+
+  render() {
+    return (
+      <div>
+        <Helmet title={this.props.post.title} />
+        <a className={styles['edit-post-button']} href="#" onClick={this.props.toggleEditPost}><FormattedMessage id="editPost" /></a>
+        {
+          this.props.showEditPost
+            ? this.renderPostForm()
+            : this.renderPost()
+        }
+      </div>
+    );
+  }
 }
 
 function mapDispatchToProps(dispatch, props) {

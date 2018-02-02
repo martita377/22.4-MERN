@@ -66,6 +66,13 @@ textarea {
   border-radius: 2px;
 }
 
+.btn {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-radius: 50%;
+}
+
 .post-title{
   font-size: 28px;
   margin-bottom: 16px;

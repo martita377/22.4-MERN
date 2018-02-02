@@ -1,0 +1,19 @@
+/* About styles */
+.container {
+	max-width: 980px;
+	width: 100%;
+	min-height: 60vh;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.about-desc {
+  font-size: 14px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.about-desc p {
+	margin-top: 20px;
+}
+

@@ -108,3 +108,4 @@ export function thumbDownRequest(cuid) {
     return callApi(`posts/thumbdown/${cuid}`, 'put').then(() => dispatch(thumbDown(cuid)));
   };
 }
+

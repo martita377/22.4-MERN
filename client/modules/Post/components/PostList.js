@@ -4,19 +4,16 @@ import React, { PropTypes } from 'react';
 import PostListItem from './PostListItem/PostListItem';
 
 function PostList(props) {
-  return (
-    <div className="listView">
-      {
-        props.posts.map(post => (
-          <PostListItem
-            post={post}
-            key={post.cuid}
-            onDelete={() => props.handleDeletePost(post.cuid)}
-            thumbUp={() => props.thumbUp(post.cuid)}
-            thumbDown={() => props.thumbDown(post.cuid)}          
-          />
-        ))
-      }
+  return ( 
+    <div className= "listView" > {
+      props.posts.map(post => ( 
+        <PostListItem post= { post } key = { post.cuid } onDelete = {
+          () => props.handleDeletePost(post.cuid) } thumbUp = {
+          () => props.thumbUp(post.cuid) } thumbDown = {
+          () => props.thumbDown(post.cuid) }
+        />
+      ))
+    } 
     </div>
   );
 }
